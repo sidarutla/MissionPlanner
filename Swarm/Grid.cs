@@ -54,7 +54,7 @@ namespace MissionPlanner.Swarm
         public Grid()
         {
             InitializeComponent();
-
+            this.BackColor = Color.Silver;
             this.SetStyle(ControlStyles.AllPaintingInWmPaint, true);
 
             this.Resize += Grid_Resize;
@@ -77,7 +77,7 @@ namespace MissionPlanner.Swarm
 
             yline = (this.Height - 1) / (float)ydist;
 
-            var pen = new Pen(Color.Silver);
+            var pen = new Pen(Color.Black);
             pen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
 
             if (BGImage != null)
@@ -94,7 +94,7 @@ namespace MissionPlanner.Swarm
                 }
                 else if (x % 2 == 0)
                 {
-                    e.Graphics.DrawLine(Pens.Silver, x * xline, 0, x * xline, this.Height);
+                    e.Graphics.DrawLine(Pens.Black, x * xline, 0, x * xline, this.Height);
                 }
                 else
                 {
@@ -110,7 +110,7 @@ namespace MissionPlanner.Swarm
                 }
                 else if (y % 2 == 0)
                 {
-                    e.Graphics.DrawLine(Pens.Silver, 0, y * yline, this.Width, y * yline);
+                    e.Graphics.DrawLine(Pens.Black, 0, y * yline, this.Width, y * yline);
                 }
                 else
                 {
@@ -119,8 +119,8 @@ namespace MissionPlanner.Swarm
             }
 
             // draw the middle lines
-            e.Graphics.DrawLine(Pens.Green, xdist / 2 * xline, 0, xdist / 2 * xline, this.Height);
-            e.Graphics.DrawLine(Pens.Green, 0, ydist / 2 * yline, this.Width, ydist / 2 * yline);
+            e.Graphics.DrawLine(Pens.Black, xdist / 2 * xline, 0, xdist / 2 * xline, this.Height);
+            e.Graphics.DrawLine(Pens.Black, 0, ydist / 2 * yline, this.Width, ydist / 2 * yline);
 
             //text
             for (float x = 1; x <= xdist; x++)
