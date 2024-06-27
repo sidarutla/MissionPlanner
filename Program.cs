@@ -200,7 +200,7 @@ namespace MissionPlanner
                 return;
             }
 
-            name = "Mission Planner";
+            name = "Thanos Mission Planner";
 
             try
             {
@@ -228,7 +228,7 @@ namespace MissionPlanner
             }
             else
             {
-                IconFile = MissionPlanner.Properties.Resources.mpdesktop.ToBitmap();
+                IconFile = MissionPlanner.Properties.Resources.thanos_icon.ToBitmap();
             }
 
             if (File.Exists(Settings.GetRunningDirectory() + "splashbg.png")) // 600*375
@@ -277,7 +277,7 @@ namespace MissionPlanner
             string strVersion = File.Exists("version.txt")
                 ? File.ReadAllText("version.txt")
                 : System.Reflection.Assembly.GetExecutingAssembly().GetName().Version.ToString();
-            Splash.Text = name + " " + Application.ProductVersion + " build " + strVersion;
+            Splash.Text = name;
             Console.WriteLine("Splash.Show()");
             Splash.Show();
 
@@ -488,7 +488,7 @@ namespace MissionPlanner
 
         private static string SerialPort_GetDeviceName(string port)
         {
-            ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_SerialPort"); // Win32_USBControllerDevice
+            ObjectQuery query = new ObjectQuery("SELECT * FROM Win32_SerialPort"); // Win32_USBCon trollerDevice
             using (ManagementObjectSearcher searcher = new ManagementObjectSearcher(query))
             {
                 foreach (ManagementObject obj2 in searcher.Get())

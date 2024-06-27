@@ -103,9 +103,9 @@ namespace MissionPlanner.Maps {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        public static System.Drawing.Bitmap _0d92fed790a3a70170e61a86db103f399a595c70 {
+        public static System.Drawing.Bitmap _thanos_logo {
             get {
-                object obj = ResourceManager.GetObject("0d92fed790a3a70170e61a86db103f399a595c70", resourceCulture);
+                object obj = ResourceManager.GetObject("thanos_logo", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
