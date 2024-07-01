@@ -23,17 +23,17 @@
     </ThemeColor>
     <ThemeColor>
       <strColorItemName>Button Text</strColorItemName>
-      <clrColor Web="#405704" />
+      <clrColor Web="#000000" />
       <strVariableName>ButtonTextColor</strVariableName>
     </ThemeColor>
     <ThemeColor>
       <strColorItemName>Button Background top</strColorItemName>
-      <clrColor Web="#94C11F" />
+      <clrColor Web="#0476D0" />
       <strVariableName>ButBG</strVariableName>
     </ThemeColor>
     <ThemeColor>
       <strColorItemName>Button Background bottom</strColorItemName>
-      <clrColor Web="#CDE296" />
+      <clrColor Web="#0476D0" />
       <strVariableName>ButBGBot</strVariableName>
     </ThemeColor>
     <ThemeColor>
@@ -53,27 +53,27 @@
     </ThemeColor>
     <ThemeColor>
       <strColorItemName>BannerColor1</strColorItemName>
-      <clrColor Web="#405704" />
+      <clrColor Web="#0476D0" />
       <strVariableName>BannerColor1</strVariableName>
     </ThemeColor>
     <ThemeColor>
       <strColorItemName>BannerColor2</strColorItemName>
-      <clrColor Web="#94C11F" />
+      <clrColor Web="#0476D0" />
       <strVariableName>BannerColor2</strVariableName>
     </ThemeColor>
     <ThemeColor>
       <strColorItemName>Disabled Button</strColorItemName>
-      <clrColor Web="#2B3A03" Alpha="150" />
+      <clrColor Web="#000000" Alpha="100" />
       <strVariableName>ColorNotEnabled</strVariableName>
     </ThemeColor>
     <ThemeColor>
       <strColorItemName>Button Mouseover</strColorItemName>
-      <clrColor Web="#2B3A03" Alpha="73" />
+      <clrColor Web="#000000" Alpha="50" />
       <strVariableName>ColorMouseOver</strVariableName>
     </ThemeColor>
     <ThemeColor>
       <strColorItemName>Button Mousedown</strColorItemName>
-      <clrColor Web="#2B3A03" Alpha="73" />
+      <clrColor Web="#000000" Alpha="50" />
       <strVariableName>ColorMouseDown</strVariableName>
     </ThemeColor>
     <ThemeColor>
