@@ -22,6 +22,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 {
     public partial class ConfigRawParams : MyUserControl, IActivate, IDeactivate
     {
+        // Define a HashSet of read-only parameters
+        private readonly HashSet<string> readOnlyParameters = new HashSet<string>
+        {
+            "ACRO_BAL_PITCH",
+            // Add more parameter names as needed
+        };
+
         // from http://stackoverflow.com/questions/2512781/winforms-big-paragraph-tooltip/2512895#2512895
         private const int maximumSingleLineTooltipLength = 50;
 
@@ -42,6 +49,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         public ConfigRawParams()
         {
             InitializeComponent();
+            Params.CellFormatting += Params_CellFormatting;
         }
 
         public void Activate()
@@ -963,6 +971,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void Params_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
+            string paramName = Params[Command.Index, e.RowIndex].Value.ToString();
+            if (readOnlyParameters.Contains(paramName))
+            {
+                e.Cancel = true;
+                return;
+            }
+
             cellEditValue = Params[e.ColumnIndex, e.RowIndex].Value.ToString();
         }
 
@@ -1202,6 +1217,18 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             if (e.Column.Index == Options.Index || e.Column.Index + 1 == Options.Index)
             {
                 optionsControlUpateBounds();
+            }
+        }
+
+        private void Params_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex == Value.Index && e.RowIndex >= 0)
+            {
+                var paramName = Params[Command.Index, e.RowIndex].Value.ToString();
+                if (readOnlyParameters.Contains(paramName))
+                {
+                    e.CellStyle.SelectionBackColor = Color.Red;
+                }
             }
         }
     }
