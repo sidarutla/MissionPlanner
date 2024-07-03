@@ -50,20 +50,20 @@ namespace MissionPlanner.Controls
         [System.ComponentModel.Browsable(true), System.ComponentModel.Category("Colors")]
         public Color TextColorNotEnabled { get { return (_TextColorNotEnabled.IsEmpty) ? _TextColor : _TextColorNotEnabled; } set { _TextColorNotEnabled = value; this.Invalidate(); } }
         [System.ComponentModel.Browsable(true), System.ComponentModel.Category("Colors")]
-        [DefaultValue(typeof(Color), "0x79, 0x94, 0x29")]
+        [DefaultValue(typeof(Color), "0x04, 0x7c, 0xD0")]
         public Color Outline { get { return _Outline; } set { _Outline = value; this.Invalidate(); } }
 
         protected override Size DefaultSize => base.DefaultSize;
 
         public MyButton()
         {
-            _BGGradTop = Color.FromArgb(0x94, 0xc1, 0x1f);
-            _BGGradBot = Color.FromArgb(0xcd, 0xe2, 0x96);
-            _TextColor = Color.FromArgb(0x40, 0x57, 0x04);
-            _Outline = Color.FromArgb(0x79, 0x94, 0x29);
-            _ColorNotEnabled = Color.FromArgb(73, 0x2b, 0x3a, 0x03);
-            _ColorMouseOver = Color.FromArgb(73, 0x2b, 0x3a, 0x03);
-            _ColorMouseDown = Color.FromArgb(150, 0x2b, 0x3a, 0x03);
+            _BGGradTop = Color.FromArgb(0x04, 0x7c, 0xD0);
+            _BGGradBot = Color.FromArgb(0x04, 0x7c, 0xD0);
+            _TextColor = Color.FromArgb(0, 0, 0);
+            _Outline = Color.FromArgb(0x04, 0x7c, 0xD0);
+            _ColorNotEnabled = Color.FromArgb(100, 0, 0, 0);
+            _ColorMouseOver = Color.FromArgb(50, 0, 0, 0);
+            _ColorMouseDown = Color.FromArgb(50, 0, 0, 0);
         }
 
         protected override void OnPaint(PaintEventArgs pevent)
