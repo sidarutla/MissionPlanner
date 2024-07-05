@@ -23,7 +23,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
     public partial class ConfigRawParams : MyUserControl, IActivate, IDeactivate
     {
         // Define a HashSet of read-only parameters
-        private readonly HashSet<string> readOnlyParameters = new HashSet<string>
+        private readonly HashSet<string> editableParameters = new HashSet<string>
         {
             "ACRO_BAL_PITCH",
             // Add more parameter names as needed
@@ -972,7 +972,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
         private void Params_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
             string paramName = Params[Command.Index, e.RowIndex].Value.ToString();
-            if (readOnlyParameters.Contains(paramName))
+            if (!editableParameters.Contains(paramName))
             {
                 e.Cancel = true;
                 return;
@@ -1225,7 +1225,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             if (e.ColumnIndex == Value.Index && e.RowIndex >= 0)
             {
                 var paramName = Params[Command.Index, e.RowIndex].Value.ToString();
-                if (readOnlyParameters.Contains(paramName))
+                if (!editableParameters.Contains(paramName))
                 {
                     e.CellStyle.SelectionBackColor = Color.Red;
                 }
