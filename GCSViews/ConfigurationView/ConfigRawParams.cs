@@ -52,9 +52,12 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
             _changes.Clear();
 
-            BUT_writePIDS.Enabled = MainV2.comPort.BaseStream.IsOpen;
-            BUT_rerequestparams.Enabled = MainV2.comPort.BaseStream.IsOpen;
-            BUT_reset_params.Enabled = MainV2.comPort.BaseStream.IsOpen;
+            BUT_writePIDS.Enabled = false;
+            BUT_rerequestparams.Enabled = true;
+            BUT_reset_params.Enabled = false;
+            BUT_save.Enabled = false;
+            BUT_load.Enabled = false;
+            BUT_compare.Enabled = false;
             BUT_commitToFlash.Visible = MainV2.DisplayConfiguration.displayParamCommitButton;
             BUT_refreshTable.Visible = Settings.Instance.GetBoolean("SlowMachine", false);
 
@@ -727,7 +730,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                    CMB_paramfiles.DataSource = paramfiles.ToArray();
                    CMB_paramfiles.DisplayMember = "name";
                    CMB_paramfiles.Enabled = true;
-                   BUT_paramfileload.Enabled = true;
+                   BUT_paramfileload.Enabled = false;
                });
             }
             catch (Exception ex)
@@ -963,7 +966,9 @@ namespace MissionPlanner.GCSViews.ConfigurationView
 
         private void Params_CellBeginEdit(object sender, DataGridViewCellCancelEventArgs e)
         {
-            cellEditValue = Params[e.ColumnIndex, e.RowIndex].Value.ToString();
+            // customers cannot edit params
+            e.Cancel = true;
+            return;
         }
 
         private void BUT_refreshTable_Click(object sender, EventArgs e)
