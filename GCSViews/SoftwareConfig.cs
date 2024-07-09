@@ -74,12 +74,12 @@ namespace MissionPlanner.GCSViews
                         {
                             if (MainV2.DisplayConfiguration.displayBasicTuning)
                             {
-                                start = AddBackstageViewPage(typeof(ConfigSimplePids), Strings.BasicTuning);
+                                // start = AddBackstageViewPage(typeof(ConfigSimplePids), Strings.BasicTuning);
                             }
 
                             if (MainV2.DisplayConfiguration.displayExtendedTuning)
                             {
-                                AddBackstageViewPage(typeof(ConfigArducopter), Strings.ExtendedTuning);
+                                // AddBackstageViewPage(typeof(ConfigArducopter), Strings.ExtendedTuning);
                             }
                         }
 
@@ -87,23 +87,23 @@ namespace MissionPlanner.GCSViews
                         {
                             if (MainV2.DisplayConfiguration.displayBasicTuning)
                             {
-                                start = AddBackstageViewPage(typeof(ConfigArduplane), Strings.BasicTuning);
+                                // start = AddBackstageViewPage(typeof(ConfigArduplane), Strings.BasicTuning);
                             }
 
                             if (MainV2.DisplayConfiguration.displayExtendedTuning)
                             {
-                                AddBackstageViewPage(typeof(ConfigArducopter), "QP " + Strings.ExtendedTuning);
+                                //AddBackstageViewPage(typeof(ConfigArducopter), "QP " + Strings.ExtendedTuning);
                             }
                         }
 
                         if (MainV2.comPort.MAV.cs.firmware == Firmwares.ArduRover)
                         {
-                            start = AddBackstageViewPage(typeof(ConfigArdurover), Strings.BasicTuning);
+                            // start = AddBackstageViewPage(typeof(ConfigArdurover), Strings.BasicTuning);
                         }
 
                         if (MainV2.comPort.MAV.cs.firmware == Firmwares.ArduTracker)
                         {
-                            start = AddBackstageViewPage(typeof(ConfigAntennaTracker), Strings.ExtendedTuning);
+                            // start = AddBackstageViewPage(typeof(ConfigAntennaTracker), Strings.ExtendedTuning);
                         }
 
                         if (MainV2.DisplayConfiguration.displayStandardParams)
@@ -118,20 +118,20 @@ namespace MissionPlanner.GCSViews
 
                         if (!Program.MONO && ConfigOSD.IsApplicable() && MainV2.DisplayConfiguration.displayOSD)
                         {
-                            AddBackstageViewPage(typeof(ConfigOSD), Strings.OnboardOSD);
+                            // AddBackstageViewPage(typeof(ConfigOSD), Strings.OnboardOSD);
                         }
 
                         if (MainV2.DisplayConfiguration.displayMavFTP)
                         {
                             if ((MainV2.comPort.MAV.cs.capabilities & (int)MAVLink.MAV_PROTOCOL_CAPABILITY.FTP) > 0)
                             {
-                                AddBackstageViewPage(typeof(MavFTPUI), Strings.MAVFtp);
+                                // AddBackstageViewPage(typeof(MavFTPUI), Strings.MAVFtp);
                             }
                         }
 
                         if (MainV2.DisplayConfiguration.displayUserParam)
                         {
-                            AddBackstageViewPage(typeof(ConfigUserDefined), Strings.User_Params);
+                            // AddBackstageViewPage(typeof(ConfigUserDefined), Strings.User_Params);
                         }
                     }
                 }
