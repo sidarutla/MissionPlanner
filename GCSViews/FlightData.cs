@@ -685,17 +685,17 @@ namespace MissionPlanner.GCSViews
 
             TabListDisplay.Add(tabPagePreFlight.Name, MainV2.DisplayConfiguration.displayPreFlightTab);
 
-            TabListDisplay.Add(tabActions.Name, MainV2.DisplayConfiguration.displayAdvActionsTab);
+            // TabListDisplay.Add(tabActions.Name, MainV2.DisplayConfiguration.displayAdvActionsTab);
 
             TabListDisplay.Add(tabActionsSimple.Name, MainV2.DisplayConfiguration.displaySimpleActionsTab);
 
-            TabListDisplay.Add(tabGauges.Name, MainV2.DisplayConfiguration.displayGaugesTab);
+            // TabListDisplay.Add(tabGauges.Name, MainV2.DisplayConfiguration.displayGaugesTab);
 
-            TabListDisplay.Add(tabStatus.Name, MainV2.DisplayConfiguration.displayStatusTab);
+            // TabListDisplay.Add(tabStatus.Name, MainV2.DisplayConfiguration.displayStatusTab);
 
             TabListDisplay.Add(tabServo.Name, MainV2.DisplayConfiguration.displayServoTab);
 
-            TabListDisplay.Add(tabScripts.Name, MainV2.DisplayConfiguration.displayScriptsTab);
+            // TabListDisplay.Add(tabScripts.Name, MainV2.DisplayConfiguration.displayScriptsTab);
 
             TabListDisplay.Add(tabTLogs.Name, MainV2.DisplayConfiguration.displayTelemetryTab);
 
@@ -703,11 +703,11 @@ namespace MissionPlanner.GCSViews
 
             TabListDisplay.Add(tabPagemessages.Name, MainV2.DisplayConfiguration.displayMessagesTab);
 
-            TabListDisplay.Add(tabTransponder.Name, MainV2.DisplayConfiguration.displayTransponderTab);
+            // TabListDisplay.Add(tabTransponder.Name, MainV2.DisplayConfiguration.displayTransponderTab);
 
-            TabListDisplay.Add(tabAuxFunction.Name, MainV2.DisplayConfiguration.displayAuxFunctionTab);
+            // TabListDisplay.Add(tabAuxFunction.Name, MainV2.DisplayConfiguration.displayAuxFunctionTab);
 
-            TabListDisplay.Add(tabPayload.Name, MainV2.DisplayConfiguration.displayPayloadTab);
+            // TabListDisplay.Add(tabPayload.Name, MainV2.DisplayConfiguration.displayPayloadTab);
         }
 
         private void loadTabControlActions()
