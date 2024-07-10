@@ -99,13 +99,13 @@
             // 
             // myLabel4
             // 
-            this.myLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
+            /*this.myLabel4.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.myLabel4.Location = new System.Drawing.Point(514, 9);
             this.myLabel4.Name = "myLabel4";
             this.myLabel4.resize = false;
             this.myLabel4.Size = new System.Drawing.Size(75, 23);
             this.myLabel4.TabIndex = 3;
-            this.myLabel4.Text = "Options";
+            this.myLabel4.Text = "Options";*/
             // 
             // ConfigSerial
             // 

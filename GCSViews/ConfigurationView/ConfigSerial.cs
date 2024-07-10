@@ -228,6 +228,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 {
                     ComboBox cmb = new ComboBox() { Dock = DockStyle.Fill };
                     cmb.DropDownStyle = ComboBoxStyle.DropDownList;
+                    cmb.Enabled = false;
                     cmb.DataSource = baudOptions;
                     cmb.DisplayMember = "Value";
                     cmb.ValueMember = "Key";
@@ -268,6 +269,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                         Name = protParamName
                     };
 
+                    cmb.Enabled = false;
                     widenComboBox(cmb);
                     ThemeManager.ApplyThemeTo(cmb);
                     tableLayoutPanel1.GetControlFromPosition(2, i)?.Dispose();
@@ -319,6 +321,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                 if (bitmask.Count > 0)
                 {
                     MyButton optionsControl = new MyButton() { Text = "Set Bitmask" };
+                    optionsControl.Visible = false;
                     optionsControl.Click += (s, a) =>
                     {
                         var mcb = new MavlinkCheckBoxBitMask();
@@ -355,7 +358,7 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             //Add the message to the bottom of the table
             noteLabel = new Label()
             {
-                Text = "Note: Changes to the serial port settings will not take effect until the board is rebooted.",
+                // Text = "Note: Changes to the serial port settings will not take effect until the board is rebooted.",
                 Anchor = AnchorStyles.None,
                 Dock = DockStyle.Fill,
                 AutoSize = true,
