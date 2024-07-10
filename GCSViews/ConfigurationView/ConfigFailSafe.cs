@@ -84,6 +84,13 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             mavlinkCheckBoxshort_fs.setup(1, 0, "FS_SHORT_ACTN", MainV2.comPort.MAV.param);
             mavlinkCheckBoxlong_fs.setup(1, 0, "FS_LONG_ACTN", MainV2.comPort.MAV.param);
 
+            mavlinkNumericUpDownlow_voltage.Enabled = false;
+            mavlinkNumericUpDownFS_BATT_MAH.Enabled = false;
+            mavlinkNumericUpDownBATT_LOW_TIMER.Enabled = false;
+            mavlinkNumericUpDownfs_thr_value.Enabled = false;
+            mavlinkComboBoxfs_batt_enable.Enabled = false;
+            mavlinkComboBox_fs_thr_enable.Enabled = false;
+
             _timer.Enabled = true;
             _timer.Interval = 100;
             _timer.Start();
