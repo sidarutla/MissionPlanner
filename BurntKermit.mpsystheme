@@ -78,7 +78,7 @@
     </ThemeColor>
     <ThemeColor>
       <strColorItemName>CurrentPPM Background</strColorItemName>
-      <clrColor Web="Green" />
+      <clrColor Web="#262728" />
       <strVariableName>CurrentPPMBackground</strVariableName>
     </ThemeColor>
     <ThemeColor>

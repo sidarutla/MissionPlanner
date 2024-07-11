@@ -56,6 +56,10 @@ namespace MissionPlanner.GCSViews.ConfigurationView
             mavlinkComboBox3.setup(ParameterMetaDataRepository.GetParameterOptionsInt("BATT2_CURR_PIN",
                 MainV2.comPort.MAV.cs.firmware.ToString()), "BATT2_CURR_PIN", MainV2.comPort.MAV.param);
 
+            mavlinkComboBox1.Enabled = false;
+            mavlinkComboBox2.Enabled = false;
+            mavlinkComboBox3.Enabled = false;
+
             _startup = false;
 
             timer1.Start();

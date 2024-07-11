@@ -255,8 +255,15 @@
             // 
             // BUT_SaveModes
             // 
+            this.BUT_SaveModes.BGGradBot = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(124)))), ((int)(((byte)(208)))));
+            this.BUT_SaveModes.BGGradTop = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(124)))), ((int)(((byte)(208)))));
+            this.BUT_SaveModes.ColorMouseDown = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BUT_SaveModes.ColorMouseOver = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BUT_SaveModes.ColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(100)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             resources.ApplyResources(this.BUT_SaveModes, "BUT_SaveModes");
             this.BUT_SaveModes.Name = "BUT_SaveModes";
+            this.BUT_SaveModes.TextColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.BUT_SaveModes.TextColorNotEnabled = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.BUT_SaveModes.UseVisualStyleBackColor = true;
             this.BUT_SaveModes.Click += new System.EventHandler(this.BUT_SaveModes_Click);
             // 
@@ -299,25 +306,9 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.Controls.Add(this.labelfm1, 0, 0);
-            this.tableLayoutPanel1.Controls.Add(this.chk_ss6, 3, 5);
             this.tableLayoutPanel1.Controls.Add(this.CMB_fmode1, 1, 0);
-            this.tableLayoutPanel1.Controls.Add(this.chk_ss5, 3, 4);
-            this.tableLayoutPanel1.Controls.Add(this.label11, 4, 5);
-            this.tableLayoutPanel1.Controls.Add(this.chk_ss4, 3, 3);
-            this.tableLayoutPanel1.Controls.Add(this.label10, 4, 4);
-            this.tableLayoutPanel1.Controls.Add(this.chk_ss1, 3, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label9, 4, 3);
-            this.tableLayoutPanel1.Controls.Add(this.chk_ss3, 3, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label8, 4, 2);
-            this.tableLayoutPanel1.Controls.Add(this.label12, 4, 0);
-            this.tableLayoutPanel1.Controls.Add(this.label7, 4, 1);
-            this.tableLayoutPanel1.Controls.Add(this.chk_ss2, 3, 1);
-            this.tableLayoutPanel1.Controls.Add(this.CB_simple5, 2, 4);
             this.tableLayoutPanel1.Controls.Add(this.labelfm2, 0, 1);
-            this.tableLayoutPanel1.Controls.Add(this.CB_simple4, 2, 3);
             this.tableLayoutPanel1.Controls.Add(this.CMB_fmode2, 1, 1);
-            this.tableLayoutPanel1.Controls.Add(this.CB_simple3, 2, 2);
-            this.tableLayoutPanel1.Controls.Add(this.CB_simple2, 2, 1);
             this.tableLayoutPanel1.Controls.Add(this.labelfm3, 0, 2);
             this.tableLayoutPanel1.Controls.Add(this.labelfm4, 0, 3);
             this.tableLayoutPanel1.Controls.Add(this.labelfm5, 0, 4);
@@ -326,10 +317,12 @@
             this.tableLayoutPanel1.Controls.Add(this.CMB_fmode4, 1, 3);
             this.tableLayoutPanel1.Controls.Add(this.CMB_fmode5, 1, 4);
             this.tableLayoutPanel1.Controls.Add(this.CMB_fmode6, 1, 5);
-            this.tableLayoutPanel1.Controls.Add(this.BUT_SaveModes, 1, 6);
-            this.tableLayoutPanel1.Controls.Add(this.CB_simple1, 2, 0);
-            this.tableLayoutPanel1.Controls.Add(this.CB_simple6, 2, 5);
-            this.tableLayoutPanel1.Controls.Add(this.linkLabel1_ss, 3, 6);
+            this.tableLayoutPanel1.Controls.Add(this.label12, 2, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label7, 2, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label8, 2, 2);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 2, 3);
+            this.tableLayoutPanel1.Controls.Add(this.label10, 2, 4);
+            this.tableLayoutPanel1.Controls.Add(this.label11, 2, 5);
             resources.ApplyResources(this.tableLayoutPanel1, "tableLayoutPanel1");
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             // 

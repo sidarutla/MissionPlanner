@@ -149,7 +149,12 @@ namespace MissionPlanner.GCSViews.ConfigurationView
                     CMB_fmode4.SelectedValue = int.Parse(MainV2.comPort.MAV.param["FLTMODE4"].ToString());
                     CMB_fmode5.SelectedValue = int.Parse(MainV2.comPort.MAV.param["FLTMODE5"].ToString());
                     CMB_fmode6.SelectedValue = int.Parse(MainV2.comPort.MAV.param["FLTMODE6"].ToString());
-                    CMB_fmode6.Enabled = true;
+                    CMB_fmode1.Enabled = false;
+                    CMB_fmode2.Enabled = false;
+                    CMB_fmode3.Enabled = false; 
+                    CMB_fmode4.Enabled = false;
+                    CMB_fmode5.Enabled = false;
+                    CMB_fmode6.Enabled = false;
 
                     if (MainV2.comPort.MAV.param.ContainsKey("SIMPLE"))
                     {

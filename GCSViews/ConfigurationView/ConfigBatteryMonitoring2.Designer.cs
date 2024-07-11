@@ -80,6 +80,7 @@
             resources.ApplyResources(this.TXT_battcapacity, "TXT_battcapacity");
             this.TXT_battcapacity.Name = "TXT_battcapacity";
             this.TXT_battcapacity.Validated += new System.EventHandler(this.TXT_battcapacity_Validated);
+            this.TXT_battcapacity.ReadOnly = true;
             // 
             // pictureBox5
             // 
@@ -111,6 +112,7 @@
             this.CHK_speechbattery.Name = "CHK_speechbattery";
             this.CHK_speechbattery.UseVisualStyleBackColor = true;
             this.CHK_speechbattery.CheckedChanged += new System.EventHandler(this.CHK_speechbattery_CheckedChanged);
+            this.CHK_speechbattery.Enabled = false;
             // 
             // TXT_measuredvoltage
             // 
@@ -118,6 +120,7 @@
             this.TXT_measuredvoltage.Name = "TXT_measuredvoltage";
             this.TXT_measuredvoltage.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TXT_measuredvoltage_PreviewKeyDown);
             this.TXT_measuredvoltage.Validated += new System.EventHandler(this.TXT_measuredvoltage_Validated);
+            this.TXT_measuredvoltage.ReadOnly = true;
             // 
             // TXT_voltage
             // 
@@ -136,6 +139,7 @@
             this.TXT_divider.Name = "TXT_divider";
             this.TXT_divider.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TXT_divider_PreviewKeyDown);
             this.TXT_divider.Validated += new System.EventHandler(this.TXT_divider_Validated);
+            this.TXT_divider.ReadOnly = true;
             // 
             // label34
             // 
@@ -148,6 +152,7 @@
             this.TXT_ampspervolt.Name = "TXT_ampspervolt";
             this.TXT_ampspervolt.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.TXT_ampspervolt_PreviewKeyDown);
             this.TXT_ampspervolt.Validated += new System.EventHandler(this.TXT_ampspervolt_Validated);
+            this.TXT_ampspervolt.ReadOnly = true;
             // 
             // label33
             // 
@@ -193,6 +198,7 @@
             resources.ApplyResources(this.txt_meascurrent, "txt_meascurrent");
             this.txt_meascurrent.Name = "txt_meascurrent";
             this.txt_meascurrent.Validated += new System.EventHandler(this.txt_meascurrent_Validated);
+            this.txt_meascurrent.ReadOnly = true;
             // 
             // label3
             // 
