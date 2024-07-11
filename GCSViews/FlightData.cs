@@ -404,7 +404,7 @@ namespace MissionPlanner.GCSViews
             myhud.skyColor2 = ThemeManager.HudSkyBot;
             myhud.hudcolor = ThemeManager.HudText;
 
-            hud1.displayicons = Settings.Instance.GetBoolean("HUD_showicons", false);
+            hud1.displayicons = Settings.Instance.GetBoolean("HUD_showicons", true);
 
             tabControlactions.Multiline = Settings.Instance.GetBoolean("tabControlactions_Multiline", false);
 
