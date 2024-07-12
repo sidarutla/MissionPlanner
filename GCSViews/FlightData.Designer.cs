@@ -189,6 +189,9 @@ namespace MissionPlanner.GCSViews
             this.but_bintolog = new MissionPlanner.Controls.MyButton();
             this.but_dflogtokml = new MissionPlanner.Controls.MyButton();
             this.BUT_loganalysis = new MissionPlanner.Controls.MyButton();
+            this.but_disablearmswitch = new MissionPlanner.Controls.MyButton();
+            this.but_reboot = new MissionPlanner.Controls.MyButton();
+            this.but_proximity = new MissionPlanner.Controls.MyButton();
             this.panel_persistent = new System.Windows.Forms.Panel();
             this.tableMap = new System.Windows.Forms.TableLayoutPanel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
@@ -565,7 +568,7 @@ namespace MissionPlanner.GCSViews
             // 
             this.tabControlactions.ContextMenuStrip = this.contextMenuStripactionstab;
             this.tabControlactions.Controls.Add(this.tabQuick);
-            // this.tabControlactions.Controls.Add(this.tabActions);
+            this.tabControlactions.Controls.Add(this.tabActions);
             this.tabControlactions.Controls.Add(this.tabPagemessages);
             this.tabControlactions.Controls.Add(this.tabActionsSimple);
             this.tabControlactions.Controls.Add(this.tabPagePreFlight);
@@ -743,6 +746,9 @@ namespace MissionPlanner.GCSViews
             this.tableLayoutPanel1.Controls.Add(this.CMB_action, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.BUTactiondo, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.BUT_resumemis, 3, 4);
+            this.tableLayoutPanel1.Controls.Add(this.but_disablearmswitch, 2, 5);
+            this.tableLayoutPanel1.Controls.Add(this.but_reboot, 3, 5);
+            this.tableLayoutPanel1.Controls.Add(this.but_proximity, 4, 5);
             this.tableLayoutPanel1.Controls.Add(this.modifyandSetAlt, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.modifyandSetSpeed, 4, 0);
             this.tableLayoutPanel1.Controls.Add(this.CMB_setwp, 0, 1);
@@ -850,6 +856,36 @@ namespace MissionPlanner.GCSViews
             this.BUT_resumemis.Name = "BUT_resumemis";
             this.BUT_resumemis.UseVisualStyleBackColor = true;
             this.BUT_resumemis.Click += new System.EventHandler(this.BUT_resumemis_Click);
+            // 
+            // but_disablearmswitch
+            // 
+            this.but_disablearmswitch.ColorMouseDown = System.Drawing.Color.Empty;
+            this.but_disablearmswitch.ColorMouseOver = System.Drawing.Color.Empty;
+            this.but_disablearmswitch.ColorNotEnabled = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.but_disablearmswitch, "but_disablearmswitch");
+            this.but_disablearmswitch.Name = "but_disablearmswitch";
+            this.but_disablearmswitch.UseVisualStyleBackColor = true;
+            this.but_disablearmswitch.Click += new System.EventHandler(this.but_disablearmswitch_Click);
+            // 
+            // but_reboot
+            // 
+            this.but_reboot.ColorMouseDown = System.Drawing.Color.Empty;
+            this.but_reboot.ColorMouseOver = System.Drawing.Color.Empty;
+            this.but_reboot.ColorNotEnabled = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.but_reboot, "but_reboot");
+            this.but_reboot.Name = "but_reboot";
+            this.but_reboot.UseVisualStyleBackColor = true;
+            this.but_reboot.Click += new System.EventHandler(this.but_reboot_Click);
+            // 
+            // but_proximity
+            // 
+            this.but_proximity.ColorMouseDown = System.Drawing.Color.Empty;
+            this.but_proximity.ColorMouseOver = System.Drawing.Color.Empty;
+            this.but_proximity.ColorNotEnabled = System.Drawing.Color.Empty;
+            resources.ApplyResources(this.but_proximity, "but_proximity");
+            this.but_proximity.Name = "but_proximity";
+            this.but_proximity.UseVisualStyleBackColor = true;
+            this.but_proximity.Click += new System.EventHandler(this.but_proximity_Click);
             // 
             // modifyandSetAlt
             // 
@@ -3126,5 +3162,8 @@ namespace MissionPlanner.GCSViews
         private Controls.RelayOptions relayOptions14;
         private Controls.RelayOptions relayOptions15;
         private Controls.RelayOptions relayOptions16;
+        private Controls.MyButton but_disablearmswitch;
+        private Controls.MyButton but_reboot;
+        private Controls.MyButton but_proximity;
     }
 }

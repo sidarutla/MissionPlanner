@@ -685,7 +685,7 @@ namespace MissionPlanner.GCSViews
 
             TabListDisplay.Add(tabPagePreFlight.Name, MainV2.DisplayConfiguration.displayPreFlightTab);
 
-            // TabListDisplay.Add(tabActions.Name, MainV2.DisplayConfiguration.displayAdvActionsTab);
+            TabListDisplay.Add(tabActions.Name, MainV2.DisplayConfiguration.displayAdvActionsTab);
 
             TabListDisplay.Add(tabActionsSimple.Name, MainV2.DisplayConfiguration.displaySimpleActionsTab);
 
@@ -1448,6 +1448,28 @@ namespace MissionPlanner.GCSViews
             MainV2.comPort.setMountConfigure(MAVLink.MAV_MOUNT_MODE.MAVLINK_TARGETING, false, false, false);
             MainV2.comPort.setMountControl((float) trackBarPitch.Value * 100.0f, (float) trackBarRoll.Value * 100.0f,
                 (float) trackBarYaw.Value * 100.0f, false);
+        }
+
+        private void but_disablearmswitch_Click(object sender, EventArgs e)
+        {
+            if (CustomMessageBox.Show("Are you sure?", "", MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
+                MainV2.comPort.setMode(
+                    new MAVLink.mavlink_set_mode_t()
+                    {
+                        custom_mode = (MainV2.comPort.MAV.cs.sensors_enabled.motor_control == true && MainV2.comPort.MAV.cs.sensors_enabled.seen) ? 1u : 0u,
+                        target_system = (byte)MainV2.comPort.sysidcurrent
+                    }, MAVLink.MAV_MODE_FLAG.SAFETY_ARMED);
+        }
+
+        private void but_reboot_Click(object sender, EventArgs e)
+        {
+            if (CustomMessageBox.Show("Are you sure?", "", MessageBoxButtons.YesNo) == (int)DialogResult.Yes)
+                MainV2.comPort.doReboot(false, true);
+        }
+
+        private void but_proximity_Click(object sender, EventArgs e)
+        {
+            new ProximityControl(MainV2.comPort.MAV).Show();
         }
 
         private void BUT_resumemis_Click(object sender, EventArgs e)

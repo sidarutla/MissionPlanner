@@ -1096,7 +1096,7 @@
     <value>98</value>
   </data>
   <data name="but_disablearmswitch.Text" xml:space="preserve">
-    <value>Toggle Saftey Switch</value>
+    <value>Toggle Safety Switch</value>
   </data>
   <data name="&gt;&gt;but_disablearmswitch.Name" xml:space="preserve">
     <value>but_disablearmswitch</value>

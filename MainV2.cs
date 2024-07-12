@@ -4120,13 +4120,13 @@ namespace MissionPlanner
                 return true;
             }
 
-            if (keyData == (Keys.Control | Keys.F)) // temp
+            /*if (keyData == (Keys.Control | Keys.F)) // temp
             {
                 Form frm = new temp();
                 ThemeManager.ApplyThemeTo(frm);
                 frm.Show();
                 return true;
-            }
+            }*/
 
             /*if (keyData == (Keys.Control | Keys.S)) // screenshot
             {
